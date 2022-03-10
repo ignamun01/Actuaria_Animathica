@@ -77,14 +77,13 @@ class Escena_2(Scene):
 
     def construct(self):
 
-        txt_1= Text("Supongamos que invertimos $ 100 durante 5 años con la tasa de interés\n"
-        "anual efectiva del 3% para cada año.", 
-        color= BLACK, font_size=28, font="Noto Sans", line_spacing=1)
-        txt_1.shift(2.5*UP)
+        txt_1= Tex("Supongamos que el banco le ofrece un producto de inversión el cual consta de recibir una tasa de interés simple de $3\%$ al año sobre \$100 pesos invertidos durante 5 años.", 
+        color= BLACK, font_size=38)
+        txt_1.shift(2.7*UP)
         r_t1=self.rectangulo_texto(txt_1)
 
         txt_2= Text("Analicemos la información que nos dan:", 
-        color= BLACK, font_size=28, font="Noto Sans")
+        color= BLACK, font_size=26, font="Noto Sans")
         txt_2.shift(1.5*UP)
 
         txt_3=BulletedList("$C_0$ = 100", "i = $3\%$", "t = 5 Años", font_size=30, buff=0.3)
@@ -92,7 +91,7 @@ class Escena_2(Scene):
         txt_3.shift(0.4*UP)
 
         txt_4=Text("Usando la expresión que tenemos para el interés simple:",
-        color= BLACK, font_size=28, font="Noto Sans")
+        color= BLACK, font_size=26, font="Noto Sans")
         txt_4.shift(0.8*DOWN)
 
         txt_5= Tex("$C_t = 100 (1 + 0.03*5)$", 
