@@ -311,7 +311,7 @@ class Escena_3(Scene):
 
         ##########################EJEMPLO 2 #################################
 
-        txt_1=Tex("2- Pasar de una tasa de interés nominal trimestral del $7\%$ a una tasa de\n"
+        """ txt_1=Tex("2- Pasar de una tasa de interés nominal trimestral del $7\%$ a una tasa de\n"
         "interés efectiva mensual.", color= BLACK, font_size=32)
         txt_1.shift(2.25*UP)
         rtxt_1 = self.rectangulo_texton(txt_1)
@@ -357,10 +357,10 @@ class Escena_3(Scene):
         self.play(Write(txt_7))
         self.wait() 
         self.play(Write(txt_9))
-        self.wait(2)
+        self.wait(2) """
 
 
-        ###########################################################################################
+###########################################################################################
 ##############################  Escena 6  #################################################
 ###########################################################################################
 
