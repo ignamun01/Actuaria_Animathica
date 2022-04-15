@@ -335,7 +335,7 @@ class Escena_4(Scene):
         grupo = VGroup(rect,objeto)
         return grupo
     def rectangulo_texton(self,objeto):
-        rect = SurroundingRectangle(objeto,color=BLACK, fill_color=YELLOW_A, fill_opacity=1)
+        rect = SurroundingRectangle(objeto,color=BLACK, fill_color=GRAY_BROWN, fill_opacity=0.15, buff=0.3, corner_radius=0.1)
         grupo = VGroup(rect,objeto)
         return grupo
 
