@@ -1,9 +1,11 @@
 # Videos de Actuaría para el canal de Animathica
+-------------------------------------------------------------------------------------------------------------------------------
 
 El repositorio esta dedicado para una administración eficiente del equipo de Actuaría, en cada carpeta se encontrará el material
 utilizado para realizar cada video.
 
 ## Unidad I
+--------------------------------------------------------------------------------------------------------------------------------
 
 ### 1. ¿Qué es el dinero?
 ### 2. ¿Por qué cambia el valor del dinero con el paso del tiempo?
@@ -20,7 +22,12 @@ utilizado para realizar cada video.
 ### 13. Ejemplos de tiempo desconocido
 
 
+
+
 ## Unidad II
+--------------------------------------------------------------------------------------------------------------------------------
+
+
 ### 1. ¿Qué es una anualidad Discreta?
 ### 2. Anualidad Vencida 
 ### 3. Anualidad Anticipada
