@@ -1,6 +1,7 @@
 # Videos de Actuaría para el canal de Animathica
 
-
+El repositorio esta dedicado para una administración eficiente del equipo de Actuaría, en cada carpeta se encontrará el material
+utilizado para realizar cada video.
 
 ## Unidad I
 
