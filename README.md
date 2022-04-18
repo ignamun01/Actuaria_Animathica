@@ -1,4 +1,4 @@
-#   📉 📈 Videos de Actuaría para el canal de Animathica 📈📉
+#   📈 Videos de Actuaría para el canal de Animathica 📈
 -------------------------------------------------------------------------------------------------------------------------------
 
 _El repositorio esta dedicado para una administración eficiente del equipo de Actuaría, en cada carpeta se encontrará el material
