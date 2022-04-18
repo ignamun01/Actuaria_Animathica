@@ -1,6 +1,6 @@
 # Actuaria_Animathica
 
-##Unidad I
+## Unidad I
 
 ### 1. ¿Qué es el dinero?
 ### 2. ¿Por qué cambia el valor del dinero con el paso del tiempo?
@@ -17,7 +17,7 @@
 ### 13. Ejemplos de tiempo desconocido
 
 
-##Unidad II
+## Unidad II
 ### 1. ¿Qué es una anualidad Discreta?
 ### 2. Anualidad Vencida 
 ### 3. Anualidad Anticipada
