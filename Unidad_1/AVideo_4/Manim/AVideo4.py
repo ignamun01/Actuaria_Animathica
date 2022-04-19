@@ -73,8 +73,8 @@ class Escena_1(Scene):
         
 
         #Escena
-        self.play(FadeIn(k_0), FadeIn(l1), FadeIn(texto_2), FadeIn(texto_3))
-        self.wait(4)
+        self.play(FadeIn(k_0), FadeIn(l1), FadeIn(texto_2), FadeIn(texto_3), run_time = 4)
+        self.wait(2)
         self.play(Write(k_1), Write(k_3))
         self.wait(2)
         self.play(Write(k_2), Write(k_4))
@@ -162,15 +162,15 @@ class Escena_2(Scene):
         
 
         #Escena
-        self.play(FadeIn(k_0))
-        self.wait(2)
-        self.play(Write(k_2_1))
-        self.wait(2)
+        self.play(FadeIn(k_0), run_time = 3)
+        self.wait(7)
+        self.play(Write(k_2_1),run_time = 5)
+        self.wait(7)
         self.play(FadeIn(linea))
-        self.wait(2)
+        self.wait(1)
 
         self.play(FadeOut(k_0), FadeOut(k_2_1))
-        self.wait(2)
+        self.wait(1)
 
         inner_4_1 = Text("U * a(t)", color= PURE_RED).scale(0.5) 
         mob_4_1 = SurroundingRectangle(inner_4_1, corner_radius=0.1, color= PURE_RED)  
@@ -194,7 +194,7 @@ class Escena_2(Scene):
         linea.target.shift(1*UP)
 
         self.play(Write(k_3_1))
-        self.wait(2)
+        self.wait()
         self.play(MoveToTarget(linea))
         self.wait()
         self.play(ReplacementTransform(k_1, k_5))
@@ -222,32 +222,43 @@ class Escena_3(Scene):
         #Textos 2_1
 
         texto_1= Text("Para esto, simplemente dividimos A(t) entre a(t).",color= BLACK, font_size=28)
-        texto_1.shift(2*UP)
+        texto_1.shift(3*UP)
 
         txt_1=self.rectangulo_texto(texto_1)
         
         formula_1=Tex("$\\frac{A(t)}{a(t)} = \\frac{u*a(t)}{a(t)} = u$",color= PURE_RED, font_size=40)
-        formula_1.shift(0.9*UP)
+        formula_1.shift(2.1*UP)
 
         texto_2=Tex("Si queremos acumular dinero de tiempo 0 a tiempo t multiplicamos U, \n"
         "que representan a las unidades monetarias, por a(t).",color= BLACK, font_size=38)
-        texto_2.shift(0.8*DOWN)
+        texto_2.shift(1*UP)
         txt_2=self.rectangulo_texto(texto_2)
 
         formula_2=Tex("Acumular dinero = $ u * a(t) $",color= PURE_RED, font_size=35)
-        formula_2.shift(2.1*DOWN)
+        formula_2.shift(.1*UP)
+
+        texto_3=Tex("Si queremos descontar dinero de tiempo t a tiempo 0 dividimos A(t) entre a(t)",color= BLACK, font_size=38)
+        texto_3.shift(1*DOWN)
+        txt_3=self.rectangulo_texto(texto_3)
+
+        formula_3=Tex("Descontar dinero = $ \\frac{A(t)}{a(t)} = \\frac{a(t)*u}{a(t)} = u$",color= PURE_RED, font_size=35)
+        formula_3.shift(1.9*DOWN)
 
 
         #Escena 2_1
-        self.play(Write(txt_1))
-        self.wait(0.45)
+        self.play(Write(txt_1), run_time=2)
+        self.wait(4)
         self.play(FadeIn(formula_1))
         self.wait(1)
-        self.play(Write(txt_2))
-        self.wait(1)
-        self.play(FadeIn(formula_2))
+        self.play(Write(txt_2), run_time=5)
         self.wait(2)
-        self.play(FadeOut(txt_1,txt_2,formula_1,formula_2))
+        self.play(FadeIn(formula_2),run_time=2)
+        self.wait(2)
+        self.play(Write(txt_3), run_time=3)
+        self.wait(1)
+        self.play(FadeIn(formula_3),run_time=2)
+        self.wait(1)
+        self.play(FadeOut(txt_1,txt_2,txt_3,formula_1,formula_2,formula_3))
 
 
 
@@ -345,9 +356,9 @@ class Escena_4(Scene):
         linea.shift(2*UP)
 
         #Escena
-        self.play(Write(txt_1))
-        self.wait()
-        self.play(Write(linea))
+        self.play(Write(txt_1),run_time=7)
+        self.wait(3)
+        self.play(Write(linea),run_time=7)
         self.wait(2)
         self.play(Write(frm))
         self.wait(2)
