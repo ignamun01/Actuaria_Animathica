@@ -28,7 +28,7 @@ class Escena_1(Scene):
         color= BLACK, font_size=28, font="Noto Sans",t2w={'interés compuesto':BOLD})
         txt_1.shift(2*UP)
 
-        txt_2= Tex("$C_{n} = C_{0}  (1+i)^{n}$", 
+        txt_2= Tex("$C_{n} = C_{0} * (1+i)^{n}$", 
         color= PURE_RED, font_size=36)
         txt_2.shift(1*UP)
 
@@ -37,20 +37,20 @@ class Escena_1(Scene):
         txt_3= Tex("Donde: ", 
         color= BLACK, font_size=32,)
 
-        txt_4=BulletedList("$C_n$= Capital  Resultante al tiempo n.", 
-        "$C_0$= Monto inicial del valor entregado como préstamo o inversión.",
-        "i = La tasa de interés del período, expresada en forma decimal.",
-        "n = Número de períodos de tiempo en los cuales se va a capitalizar.", font_size=30)
+        txt_4=BulletedList( 
+        "El capital (C): Monto inicial del valor entregado como préstamo o inversión.",
+        "i: La tasa de interés del período, expresada en forma decimal.",
+        "n: Número de períodos de tiempo en los cuales se va a capitalizar.", font_size=30)
         txt_4.shift(2*DOWN)
         txt_4.set_color(BLACK)
 
         ##### Entrada subescena 1 #####
-        self.play(Write(txt_1))
-        self.wait()
-        self.play(Write(rtxt_2))
-        self.wait()
-        self.play(Write(txt_3), Write(txt_4))
-        self.wait(2)
+        self.play(Write(txt_1),run_time=2)
+        self.wait(3)
+        self.play(Write(rtxt_2),run_time=3)
+        self.wait(5)
+        self.play(Write(txt_3), Write(txt_4),run_time=6)
+        self.wait(9)
         self.play(FadeOut(txt_1), FadeOut(rtxt_2), FadeOut(txt_3), FadeOut(txt_4))
         self.wait()
 
@@ -104,7 +104,7 @@ class Escena_1(Scene):
 
         ##################### Objetos Tiempo 1 ############################
         txt_7= Tex("Ahora, queremos saber cuánto tendremos de intereses en el \\textbf{periodo 1}.\n"
-        "Lo cual sería igual a $C_1 = C_0(1+i)^1 = C_0(1+i)$", 
+        "Lo cual sería igual a $C_1 = C_0*(1+i)^1 = C_0*(1+i)$", 
         color= BLACK, font_size=38)
         rtxt_7=self.rectangulo_texton(txt_7)
         rtxt_7.shift(2*UP)
@@ -121,8 +121,11 @@ class Escena_1(Scene):
 
         txt_8_1= Tex("Esto se debe a que para el \\textbf{periodo 2}, el capital inicial que se usará\\\\para calcular los nuevos intereses será el capital acumulado en\\\\"
         "el periodo 1 con todo e intereses, es decir:\\\\"
-        "a) $C_2 = C_1(1+i)$\\\\ o bien\\\\"
-        "b) $C_2 = C_0(1+i)^{2}$",
+        "a) $C_2 = C_1*(1+i)$ o bien\\\\"
+        "recordando que:\\\\"
+        "$C_1 = C_0*(1+i)$ entonces \\\\"
+        "b) $C_2 = C_0*(1+i)*(1+i)$\\\\"
+        "$C_2 = C_0(1+i)^{2}$",
         color= BLACK, font_size=38)
 
     
@@ -156,16 +159,16 @@ class Escena_1(Scene):
         ##################### Objetos Tiempo n ############################
         txt_10= Tex("Generalizando esta expresión para cualquier \\textbf{tiempo n} de vencimiento,"
         "los intereses acumulados más el capital inicial se calculan usando la expresión: \\\\"
-        "$C_n = (1+i)^n$", 
+        "$C_n = C_0*(1+i)^n$", 
         color= BLACK, font_size=38)
         rtxt_10=self.rectangulo_texton(txt_10)
         rtxt_10.shift(2*UP)
 
-        t_26=Tex("\\textbf{$C_0 (1+i)^n$}", color= BLACK, font_size=26)
+        t_26=Tex("\\textbf{$C_0 * (1+i)^n$}", color= BLACK, font_size=26)
         t_26.shift(4.85* RIGHT + 0.3*DOWN)
 
 
-        muñeco = ImageMobject("C:/Users/ignam/Desktop/ProyectoManim/muñeco.png")
+        muñeco = ImageMobject("C:/Users/luis2/Desktop/animathica/Video6/muñeco.png")
         muñeco.height=0.5
         muñeco.width=0.5
         muñeco.shift(2.5*DOWN+6*LEFT)
@@ -175,44 +178,44 @@ class Escena_1(Scene):
 
 
         #####Entrada a subscena 2#####
-        self.play(Write(rtxt_5))
+        self.play(Write(rtxt_5),run_time=3)
         self.play(Write(l1))
-        self.play(ReplacementTransform(rtxt_5,rtxt_6))
-        self.wait()
+        self.play(ReplacementTransform(rtxt_5,rtxt_6),run_time=2)
+        self.wait(10)
         self.play(Write(t_21),FadeIn(muñeco))
-        self.wait()
+        self.wait(2)
 
         #Movimiento al 1
         self.play(MoveToTarget(muñeco))
         self.wait()
-        self.play(Write(t_22), ReplacementTransform(rtxt_6,rtxt_7))
-        self.wait()
+        self.play(Write(t_22), ReplacementTransform(rtxt_6,rtxt_7),run_time= 1)
+        self.wait(14)
 
         #Movimiento al 2
         muñeco.generate_target()
         muñeco.target.shift(1.4*RIGHT)
         self.play(MoveToTarget(muñeco))
         self.wait()
-        self.play(Write(t_23), ReplacementTransform(rtxt_7,rtxt_8))
-        self.wait(2)
-        self.play(ReplacementTransform(rtxt_8,rtxt_8_1))
-        self.wait()
+        self.play(Write(t_23), ReplacementTransform(rtxt_7,rtxt_8),run_time= 2)
+        self.wait(5)
+        self.play(ReplacementTransform(rtxt_8,rtxt_8_1),run_time= 3)
+        self.wait(50)
 
         #Movimiento al 3
         muñeco.generate_target()
         muñeco.target.shift(1.25*RIGHT)
         self.play(MoveToTarget(muñeco))
         self.wait()
-        self.play(Write(t_24), ReplacementTransform(rtxt_8_1,rtxt_9))
-        self.wait()
+        self.play(Write(t_24), ReplacementTransform(rtxt_8_1,rtxt_9),run_time= 1)
+        self.wait(10)
 
         #Movimiento al n-1
         muñeco.generate_target()
         muñeco.target.shift(5.4*RIGHT)
         self.play(MoveToTarget(muñeco))
         self.wait()
-        self.play(Write(t_25), ReplacementTransform(rtxt_9,rtxt_10))
-        self.wait()
+        self.play(Write(t_25), ReplacementTransform(rtxt_9,rtxt_10),run_time= 1)
+        self.wait(16)
 
         #Movimiento al n
         muñeco.generate_target()
@@ -220,7 +223,7 @@ class Escena_1(Scene):
         self.play(MoveToTarget(muñeco))
         self.wait()
         self.play(Write(t_26))
-        self.wait()
+        self.wait(4)
 
 
 
@@ -247,11 +250,11 @@ class Escena_2(Scene):
         txt_3.set_color(BLACK)
         txt_3.shift(0.4*UP)
 
-        txt_4=Text("Usando la expresión que tenemos para el interés simple:",
+        txt_4=Text("Usando la expresión que tenemos para el interés compuesto:",
         color= BLACK, font_size=24, font="Noto Sans")
         txt_4.shift(0.8*DOWN)
 
-        txt_5= Tex("$C_5 = 100 (1 + 0.03)^5$", 
+        txt_5= Tex("$C_5 = 100*(1 + 0.03)^5$", 
         color= PURE_RED, font_size=36)
         txt_5.shift(1.4*DOWN)
 
@@ -260,17 +263,17 @@ class Escena_2(Scene):
         txt_6.shift(2.1*DOWN)
 
 
-        self.play(Write(r_t1))
-        self.wait()
-        self.play(Write(txt_2))
-        self.wait()
-        self.play(Write(txt_3))
+        self.play(Write(r_t1),run_time=1)
+        self.wait(18)
+        self.play(Write(txt_2),run_time=1)
+        self.wait(1)
+        self.play(Write(txt_3),run_time=5)
+        self.wait(5)
+        self.play(Write(txt_4),run_time=1)
         self.wait(2)
-        self.play(Write(txt_4))
-        self.wait()
-        self.play(Write(txt_5))
-        self.wait()
-        self.play(Write(txt_6))
-        self.wait(3)
+        self.play(Write(txt_5),run_time=1)
+        self.wait(8)
+        self.play(Write(txt_6),run_time=1)
+        self.wait(10)
 
 
