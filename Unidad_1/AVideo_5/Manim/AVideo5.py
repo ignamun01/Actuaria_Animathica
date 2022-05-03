@@ -37,7 +37,8 @@ class Escena_1(Scene):
         txt_4.shift(2*DOWN)
         txt_4.set_color(BLACK)
 
-
+        
+        #Creación de escena
         self.play(Write(txt_1))
         self.wait()
         self.play(Write(rtxt_2))
@@ -106,6 +107,7 @@ class Escena_2(Scene):
         color= BLACK, font_size=22, font="Noto Sans", slant=ITALIC)
         txt_7.shift(2.8*DOWN)
 
+        #Creación de escena
         self.play(Write(r_t1))
         self.wait()
         self.play(Write(txt_2))
@@ -154,6 +156,7 @@ class Escena_3(Scene):
 
         rect= Rectangle(width=12, height=4, color=BLACK)
 
+        #Creación de escena
         self.play(Write(rect), Write(txt_1))
         self.wait()
         self.play(Write(r_t2))
