@@ -72,7 +72,7 @@ class Escena_1(Scene):
         t_t.shift(0.75*DOWN + 0.4*LEFT)
         
 
-        #Escena
+        ##Creación de escena
         self.play(FadeIn(k_0), FadeIn(l1), FadeIn(texto_2), FadeIn(texto_3), run_time = 4)
         self.wait(2)
         self.play(Write(k_1), Write(k_3))
@@ -161,7 +161,7 @@ class Escena_2(Scene):
         
         
 
-        #Escena
+        ##Creación de escena
         self.play(FadeIn(k_0), run_time = 3)
         self.wait(7)
         self.play(Write(k_2_1),run_time = 5)
@@ -245,7 +245,7 @@ class Escena_3(Scene):
         formula_3.shift(1.9*DOWN)
 
 
-        #Escena 2_1
+        ##Creación de escena
         self.play(Write(txt_1), run_time=2)
         self.wait(4)
         self.play(FadeIn(formula_1))
@@ -355,7 +355,7 @@ class Escena_4(Scene):
         linea=VGroup(l1, l0, k_1, k_2, k_3, k_4, k_5, t_2, t_3)
         linea.shift(2*UP)
 
-        #Escena
+        ##Creación de escena
         self.play(Write(txt_1),run_time=7)
         self.wait(3)
         self.play(Write(linea),run_time=7)
