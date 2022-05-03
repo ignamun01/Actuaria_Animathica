@@ -126,7 +126,7 @@ class Escena_2(Scene):
         txt_6.shift(1.5*DOWN)
         rtxt_6 = self.rectangulo_texto(txt_6)
 
-
+        ##### Creación de escena 2 #####
         self.play(Write(rtxt_1))
         self.wait(2)
         self.play(Write(t3))
@@ -221,6 +221,7 @@ class Escena_3(Scene):
         rtxt_6 = self.rectangulo_texto(txt_6)
 
 
+        ##### Creación de subescena 1 #####
         self.play(Write(rtxt_1))
         self.wait(2)
         self.play(Write(t3))
@@ -272,6 +273,8 @@ class Escena_3(Scene):
         color= BLACK, font_size=70)
         flecha_2.shift(0.65*UP + 3*RIGHT)
 
+        
+        ##### Creación de subescena 2 #####
         self.play(Write(rtxt_1), Write(rtxt_4))
         self.wait()
         self.play(Write(rtxt_3),Write(rtxt_6), Write(flecha_1), Write(flecha_2))
