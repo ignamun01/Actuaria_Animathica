@@ -44,7 +44,7 @@ class Escena_1(Scene):
         txt_4.shift(2*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Entrada subescena 1 #####
+        ##### Creación de escena #####
         self.play(Write(txt_1))
         self.wait()
         self.play(Write(rtxt_2))
@@ -145,7 +145,9 @@ class Escena_2(Scene):
 
         rect_2 = Rectangle(color=BLACK, height=4.5, width=10)
         rect_2.shift(0.4*UP)
-
+        
+        
+        ##### Creación de subescena 1 #####
         self.play(Write(rect_1),Write(rect_2),Write(txt_1),Write(txt_2))
         self.wait(3)
         self.play(ReplacementTransform(txt_1,txt_3),ReplacementTransform(txt_2,txt_4))
@@ -186,7 +188,7 @@ class Escena_2(Scene):
         t_6= Tex("$\\frac{1}{A(t)} \lim\limits_{\Delta \\to 0} \\frac{A(t+\Delta)-A(t)}{\Delta} = \\frac{a'(t) * k}{a(t) * k}$", color= PURE_RED, font_size=43)
         t_6.shift(1.6*DOWN)
 
-
+        ##### Creación de subescena 2 #####
         self.play(Write(t_1), Write(t_2))
         self.wait(2)
         self.play(ReplacementTransform(t_1,t_3))
@@ -270,7 +272,8 @@ class Escena_3(Scene):
         color= BLACK, font_size=38)
         txt_11.shift(1*DOWN)
 
-
+        
+        ##### Creación de subescena 1 #####
         self.play(Write(txt_1), Write(txt_2))
         self.wait(2)
         self.play(ReplacementTransform(txt_1, txt_3), ReplacementTransform(txt_2, txt_4))
@@ -316,6 +319,7 @@ class Escena_3(Scene):
         t4.shift(2*DOWN)
         t4.set_color(BLACK)
 
+        ##### Creación de subescena 2 #####
         self.play(Write(t1))
         self.wait()
         self.play(Write(rt2))
@@ -366,6 +370,7 @@ class Escena_4(Scene):
         txt_4.shift(3.3*DOWN)
         rtxt_4=self.rectangulo_texto(txt_4)
 
+        ##### Creación de escena #####
         self.play(Write(rtxt_1))
         self.wait(2)
         self.play(Write(t4))
