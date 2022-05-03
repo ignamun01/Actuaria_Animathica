@@ -43,7 +43,7 @@ class Escena_1(Scene):
         txt_4.shift(2*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Entrada subescena 1 #####
+        ##### Creación de subescena 1 #####
         self.play(Write(rtxt_1))
         self.wait()
         self.play(Write(txt_2))
@@ -81,7 +81,7 @@ class Escena_1(Scene):
         txt_4.shift(2.5*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Entrada subescena 2 #####
+        ##### Creación de subescena 2 #####
         self.play(Write(rtxt_1))
         self.wait()
         self.play(Write(txt_2))
@@ -158,7 +158,7 @@ class Escena_2(Scene):
 
     def construct(self):
 
-##############################Primera subescena######################################
+############################## Primera subescena ######################################
 
         #Textos
         txt_1= Tex("La expresión de Valor Futuro para \\textbf{un solo flujo} de efectivo es la siguiente:", 
@@ -180,7 +180,7 @@ class Escena_2(Scene):
         txt_4.shift(2*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Entrada subescena 1 #####
+        ##### Creación de subescena 1 #####
         self.play(Write(rtxt_1))
         self.wait()
         self.play(Write(txt_2))
@@ -190,7 +190,7 @@ class Escena_2(Scene):
         self.play(FadeOut(rtxt_1), FadeOut(txt_2), FadeOut(txt_3), FadeOut(txt_4))
         self.wait()
 
-#####################Segunda subescena######################################
+##################### Segunda subescena ######################################
 
         #Textos
         txt_1= Tex("La expresión de Valor Futuro para \\textbf{varios flujos} de efectivo es:", 
@@ -217,7 +217,7 @@ class Escena_2(Scene):
         txt_4.shift(2.4*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Entrada subescena 2 #####
+        ##### Creación de subescena 2 #####
         self.play(Write(rtxt_1))
         self.wait()
         self.play(Write(txt_2))
@@ -282,6 +282,7 @@ class Escena_2(Scene):
         rect_2 = Rectangle(color=BLACK, height=5, width=10)
         rect_2.shift(0.4*UP)
 
+        ### Creación de subescena 3 ###
         self.play(Write(rect_1), Write(rect_2), Write(rt2), Write(t0), Write(t0_1))
         self.wait(3)
         self.play(Unwrite(t0), FadeOut(t0_1))
@@ -390,7 +391,7 @@ class Escena_3(Scene):
         rect_2.shift(0.4*UP)
 
 
-        #######Entrada a Escena#########
+        ####### Creación de subescena 1 #########
 
         self.play(Write(rect_1), Write(rect_2), Write(t0_1), Write(t0_2))
         self.wait(2)
@@ -439,6 +440,8 @@ class Escena_3(Scene):
         rect_2 = Rectangle(color=BLACK, height=4, width=9)
         rect_2.shift(0.6*UP)
 
+        
+        ####### Creación de subescena 2 #########
         self.play(Write(rect_1), Write(rect_2),Write(t1), Write(t2), Write(t3))
         self.wait(3)
         self.play(Write(t4))
@@ -539,7 +542,7 @@ class Escena_4(Scene):
         rect_2.shift(0.4*UP)
 
 
-        #######Entrada a Escena#########
+        ####### Creación de subescena 1 #########
 
         self.play(Write(rect_1), Write(rect_2), Write(t0_1), Write(t0_2), Write(t0_6))
         self.wait(2)
@@ -596,6 +599,8 @@ class Escena_4(Scene):
         rect_2 = Rectangle(color=BLACK, height=4.5, width=9)
         rect_2.shift(0.6*UP)
 
+        
+        ####### Creación de subescena 2 #########
         self.play(Write(rect_1), Write(rect_2),Write(txt_1), Write(txt_2))
         self.wait(3)
         self.play(ReplacementTransform(txt_1, t1), ReplacementTransform(txt_2,t2), Write(t3))
@@ -629,6 +634,8 @@ class Escena_4(Scene):
         t5.shift(2.2*DOWN)
         t5[1].set_color(PURE_RED)
 
+        
+        ####### Creación de subescena 3 #########
         self.play(Write(rt1))
         self.wait()
         self.play(Write(t3), Write(rt4))
