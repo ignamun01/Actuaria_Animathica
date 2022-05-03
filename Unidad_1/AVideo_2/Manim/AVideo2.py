@@ -3,6 +3,9 @@ config.background_color = YELLOW_A
 config["background_color"] = YELLOW_A
 
 
+###########################################################################################
+##############################  Escena 1  #################################################
+###########################################################################################
 
 #Esta escena no sera ocupada en este video, sin embargo en proximos si.
 class Escena_1(MovingCameraScene):
@@ -65,6 +68,9 @@ class Escena_1(MovingCameraScene):
 
 
 
+###########################################################################################
+##############################  Escena 2  #################################################
+###########################################################################################
 
 #En esta escena se creara una linea del tiempo, sobre una canasta, en la cual vemos el año y el precio de junio de ese mismo año
 #de la canasta basica en México.
@@ -147,7 +153,10 @@ class Escena_2(MovingCameraScene):
 
 
 
-#Escena 3
+###########################################################################################
+##############################  Escena 3  #################################################
+###########################################################################################
+
 #En esta escena presentaremos la formula que se utiliza para calcular la inflación en México
 #INPC= Indice Nacional de Precios al Consumidor
 
