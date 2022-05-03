@@ -5,7 +5,7 @@ config["background_color"] = YELLOW_A
 
 
 ###########################################################################################
-##############################  Escena 4  #################################################
+##############################  Escena 1  #################################################
 ###########################################################################################
 
 #Escena_1: Definicion Tasa Nominal
@@ -108,7 +108,7 @@ class Escena_1(Scene):
         l1_1.shift(2.7*DOWN)
         l1_1.numbers.set_color(BLACK)
 
-
+        #### Creación de primera subescena ####
         self.play(Write(t_1))
         self.wait(2)
         self.play(Write(l0), FadeIn(l0_1))
@@ -123,7 +123,7 @@ class Escena_1(Scene):
         self.wait(2)
 
 
-        #Segunda subescena
+        ########################### SEGUNDA SUBESCENA #############################
 
         #Textos
 
@@ -146,6 +146,7 @@ class Escena_1(Scene):
         rf_2= self.rectangulo_texton(f_2)
         f_3.shift(0.8*DOWN)
  
+        ### Creación de Segunda Subescena ###
         self.play(Write(texto_1))
         self.wait()
         self.play(Write(rf_1), Write(rf_2),Write(f_3))
@@ -218,6 +219,7 @@ class Escena_2(Scene):
 
         mob = SurroundingRectangle(t_5, corner_radius=0.1, color=PURE_RED) 
 
+        #Creación de Escena
         self.play(Write(rt_4))
         self.wait()
         self.play(Write(t_5), Write(mob))
@@ -288,7 +290,7 @@ class Escena_3(Scene):
         )
         
 
-        #Escena
+        #Creación de Escena
         self.play(Write(rt_2))
         self.wait()
         self.play(Write(t_3), Write(t_4), Write(t_5))
@@ -310,6 +312,7 @@ class Escena_3(Scene):
 
 
         ##########################EJEMPLO 2 #################################
+        #La realización de este ejemplo se cambio a Canva, sin embargo se deja aqui por si acaso es util en el futuro.
 
         """ txt_1=Tex("2- Pasar de una tasa de interés nominal trimestral del $7\%$ a una tasa de\n"
         "interés efectiva mensual.", color= BLACK, font_size=32)
@@ -361,7 +364,7 @@ class Escena_3(Scene):
 
 
 ###########################################################################################
-##############################  Escena 6  #################################################
+##############################  Escena 4  #################################################
 ###########################################################################################
 
 #Escena_4: Ejemplo del efecto de las tasas en el dinero.
@@ -445,7 +448,7 @@ class Escena_4(Scene):
         t_12.shift(2.7*DOWN)
         rt_12=self.rectangulo_textot(t_12)
 
-
+        #Creación de Escena
         self.play(Write(rt_5))
         self.wait()
         self.play(Write(t_6))
