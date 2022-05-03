@@ -44,7 +44,7 @@ class Escena_1(Scene):
         txt_4.shift(2*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Entrada subescena 1 #####
+        ##### #Creación de subescena 1 #####
         self.play(Write(txt_1),run_time=2)
         self.wait(3)
         self.play(Write(rtxt_2),run_time=3)
@@ -177,7 +177,7 @@ class Escena_1(Scene):
         muñeco.target.shift(1.3*RIGHT)
 
 
-        #####Entrada a subscena 2#####
+        ######Creación de subscena 2#####
         self.play(Write(rtxt_5),run_time=3)
         self.play(Write(l1))
         self.play(ReplacementTransform(rtxt_5,rtxt_6),run_time=2)
@@ -228,6 +228,9 @@ class Escena_1(Scene):
 
 
 
+###########################################################################################
+##############################  Escena 2  #################################################
+###########################################################################################
 
 class Escena_2(Scene):
     def rectangulo_texto(self,objeto):
@@ -263,6 +266,7 @@ class Escena_2(Scene):
         txt_6.shift(2.1*DOWN)
 
 
+        #Creación de escena
         self.play(Write(r_t1),run_time=1)
         self.wait(18)
         self.play(Write(txt_2),run_time=1)
