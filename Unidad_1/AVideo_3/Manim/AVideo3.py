@@ -51,7 +51,7 @@ class Escena_1(MovingCameraScene):
 
         pres.shift(3.25*UP)
 
-        #Escena
+        ##Creación de escena
 
         self.add(ax, graph, dot_1, dot_2, shirt, y_label, x_label,pres)
         self.wait(5)
