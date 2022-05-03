@@ -2,6 +2,8 @@ from manim import *
 config.background_color = YELLOW_A
 config["background_color"] = YELLOW_A
 
+
+
 #Esta escena no sera ocupada en este video, sin embargo en proximos si.
 class Escena_1(MovingCameraScene):
     def construct(self):
@@ -44,7 +46,7 @@ class Escena_1(MovingCameraScene):
         shirt.width=1
         shirt.shift(2.5* DOWN + 6 * LEFT)
 
-        #Escena
+        #Creación de Escena
 
         self.add(ax, graph, dot_1, dot_2, shirt, axxes_labels,labels)
         self.wait(2)
@@ -123,7 +125,7 @@ class Escena_2(MovingCameraScene):
         shirt.width=1
         shirt.shift(0.10*DOWN + 6 * LEFT)
 
-        #Escena
+        #Creación de Escena
         self.add(graph, dot_1, dot_2, shirt, labels_graph, labels_graph_2)
         self.play(Write(text))
         self.wait(9)
