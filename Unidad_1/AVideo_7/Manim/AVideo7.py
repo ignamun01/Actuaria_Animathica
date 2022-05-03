@@ -189,6 +189,7 @@ class Escena_2(Scene):
         t_3= Text("Entonces el interés que estaremos acumulando bimestralmente será del 1.25%.", color= BLACK, font_size=22, slant=ITALIC)
         t_3.shift(1.8*DOWN)
 
+        #Creación de Escena
         self.play(Write(rt_0)) 
         self.play(Write(t_1))
         self.wait()
