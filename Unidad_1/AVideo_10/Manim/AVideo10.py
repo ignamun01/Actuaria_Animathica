@@ -38,12 +38,12 @@ class Escena_1(Scene):
         txt_3.shift(0.5*DOWN + 5*LEFT)
 
         txt_4=BulletedList("$F$= Flujo de Efectivo", 
-        "$n$= Número de periodos para llevar al presente el flujo de efectivo.",
+        "$n$= Número de periodos para traer al presente el flujo de efectivo.",
         "r = Tasa de interés", font_size=30)
         txt_4.shift(2*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Creación de subescena 1 #####
+        ##### Entrada subescena 1 #####
         self.play(Write(rtxt_1))
         self.wait()
         self.play(Write(txt_2))
@@ -81,7 +81,7 @@ class Escena_1(Scene):
         txt_4.shift(2.5*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Creación de subescena 2 #####
+        ##### Entrada subescena 2 #####
         self.play(Write(rtxt_1))
         self.wait()
         self.play(Write(txt_2))
@@ -158,7 +158,7 @@ class Escena_2(Scene):
 
     def construct(self):
 
-############################## Primera subescena ######################################
+##############################Primera subescena######################################
 
         #Textos
         txt_1= Tex("La expresión de Valor Futuro para \\textbf{un solo flujo} de efectivo es la siguiente:", 
@@ -180,7 +180,7 @@ class Escena_2(Scene):
         txt_4.shift(2*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Creación de subescena 1 #####
+        ##### Entrada subescena 1 #####
         self.play(Write(rtxt_1))
         self.wait()
         self.play(Write(txt_2))
@@ -190,7 +190,7 @@ class Escena_2(Scene):
         self.play(FadeOut(rtxt_1), FadeOut(txt_2), FadeOut(txt_3), FadeOut(txt_4))
         self.wait()
 
-##################### Segunda subescena ######################################
+#####################Segunda subescena######################################
 
         #Textos
         txt_1= Tex("La expresión de Valor Futuro para \\textbf{varios flujos} de efectivo es:", 
@@ -217,7 +217,7 @@ class Escena_2(Scene):
         txt_4.shift(2.4*DOWN)
         txt_4.set_color(BLACK)
 
-        ##### Creación de subescena 2 #####
+        ##### Entrada subescena 2 #####
         self.play(Write(rtxt_1))
         self.wait()
         self.play(Write(txt_2))
@@ -243,36 +243,28 @@ class Escena_2(Scene):
         color= BLACK, font_size=34)
         t0_1.shift(0.7*DOWN)
         
-        t1=Tex("Despejando la incógnita F tendríamos que:",
+        t1=Tex("Para conocer esto es necesario traer a valor presente \hspace{10 cm}todos los flujos de efectivo que se encuentran \hspace{10 cm}en el futuro.",
         color= BLACK, font_size=36)
-        t1.shift(0.6*DOWN)
+        t1.shift(0.2*DOWN)
 
         t2= Tex("$VF = F (1+r)^n $", 
         color= PURE_RED, font_size=36)
         t2.shift(0.5*UP)
         rt2=self.rectangulo_texto(t2)
 
-        t3= Tex("$F = \\frac{VF}{(1+r)^n}$", 
+        t3= Tex("$VP = \\frac{VF}{(1+r)^n}$", 
         color= PURE_RED, font_size=36)
         t3.shift(0.6*UP)
         rt3=self.rectangulo_texto(t3)
+        rt3.generate_target()
+        rt3.target.shift(1*UP)
 
-        t4= Tex("$VP = F= \\frac{VF}{(1+r)^n}$", 
+        t4= Tex("$VP = F = \\frac{VF}{(1+r)^n}$", 
         color= PURE_RED, font_size=36)
         t4.shift(0.6*UP)
         rt4=self.rectangulo_texto(t4)
 
-        t5=Tex("Esto se parece a algo que vimos anteriormente…",
-        color= BLACK, font_size=36)
-        t5.shift(0.6*DOWN)
-        
-
-        t6=Tex("Así es, nos queda el valor presente de un \hspace{10cm} solo flujo de efectivo a tiempo n.",
-        color= BLACK, font_size=36)
-        t6.shift(0.6*DOWN)
-        
-
-        t7=Tex("\\textit{Esto es muy importante porque nos dice que hay \\textbf{una relación entre el Valor Futuro y el Valor presente}, a partir de uno siempre podemos encontrar el otro mientras exista una tasa de interés de por medio.}",
+        t7=Tex("\\textit{Esto es muy importante porque nos indica que hay \\textbf{una relación entre el Valor Futuro y el Valor presente}, a partir de uno siempre podemos encontrar el otro mientras exista una tasa de interés de por medio.}",
         color= BLACK, font_size=36)
         t7.shift(3*DOWN)
 
@@ -282,20 +274,14 @@ class Escena_2(Scene):
         rect_2 = Rectangle(color=BLACK, height=5, width=10)
         rect_2.shift(0.4*UP)
 
-        ### Creación de subescena 3 ###
         self.play(Write(rect_1), Write(rect_2), Write(rt2), Write(t0), Write(t0_1))
         self.wait(3)
         self.play(Unwrite(t0), FadeOut(t0_1))
         self.wait(0.5)
-        self.play(Write(t1))
-        self.wait(2)
         self.play(ReplacementTransform(rt2,rt3))
+        self.wait(1)
+        self.play(Write(t1), MoveToTarget(rt3))
         self.wait(4)
-        self.play(ReplacementTransform(t1,t5))
-        self.wait(2)
-        self.play(ReplacementTransform(t5,t6))
-        self.wait(3)
-        self.play(ReplacementTransform(rt3,rt4))
         self.play(Write(t7))
         self.wait(4)
         self.play(
@@ -391,7 +377,7 @@ class Escena_3(Scene):
         rect_2.shift(0.4*UP)
 
 
-        ####### Creación de subescena 1 #########
+        #######Entrada a Escena#########
 
         self.play(Write(rect_1), Write(rect_2), Write(t0_1), Write(t0_2))
         self.wait(2)
@@ -440,8 +426,6 @@ class Escena_3(Scene):
         rect_2 = Rectangle(color=BLACK, height=4, width=9)
         rect_2.shift(0.6*UP)
 
-        
-        ####### Creación de subescena 2 #########
         self.play(Write(rect_1), Write(rect_2),Write(t1), Write(t2), Write(t3))
         self.wait(3)
         self.play(Write(t4))
@@ -542,7 +526,7 @@ class Escena_4(Scene):
         rect_2.shift(0.4*UP)
 
 
-        ####### Creación de subescena 1 #########
+        #######Entrada a Escena#########
 
         self.play(Write(rect_1), Write(rect_2), Write(t0_1), Write(t0_2), Write(t0_6))
         self.wait(2)
@@ -599,8 +583,6 @@ class Escena_4(Scene):
         rect_2 = Rectangle(color=BLACK, height=4.5, width=9)
         rect_2.shift(0.6*UP)
 
-        
-        ####### Creación de subescena 2 #########
         self.play(Write(rect_1), Write(rect_2),Write(txt_1), Write(txt_2))
         self.wait(3)
         self.play(ReplacementTransform(txt_1, t1), ReplacementTransform(txt_2,t2), Write(t3))
@@ -634,8 +616,6 @@ class Escena_4(Scene):
         t5.shift(2.2*DOWN)
         t5[1].set_color(PURE_RED)
 
-        
-        ####### Creación de subescena 3 #########
         self.play(Write(rt1))
         self.wait()
         self.play(Write(t3), Write(rt4))
